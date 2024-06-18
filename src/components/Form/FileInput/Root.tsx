@@ -5,7 +5,7 @@ import {ComponentProps, createContext, useContext, useId, useState} from 'react'
 type TFileInputContext = {
   id: string
   files: File[]
-  onFilesSelected: (files: File[]) => void
+  onFilesSelected: (files: File[], multiple: boolean) => void
 }
 
 const FileInputContext = createContext({} as TFileInputContext)
@@ -17,8 +17,16 @@ export function Root(props: TRootProps) {
 
   const id = useId()
 
+  const onFilesSelected = (files: File[], multiple: boolean) => {
+    if (multiple) {
+      setFiles((state) => [...state, ...files])
+      return
+    }
+    setFiles(files)
+  }
+
   return (
-    <FileInputContext.Provider value={{id, files, onFilesSelected: setFiles}}>
+    <FileInputContext.Provider value={{id, files, onFilesSelected}}>
       <div {...props} />
     </FileInputContext.Provider>
   )
