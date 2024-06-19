@@ -10,7 +10,7 @@ const button = tv({
   variants: {
     variant: {
       primary: ['bg-violet-600 text-white hover:bg-violet-700'],
-      ghost: ['rounded-md px-2 hover:bg-zinc-50 shadow-none'],
+      ghost: ['rounded-md px-2 hover:bg-zinc-50 shadow-none text-zinc-500'],
       outline: ['border border-zinc-300 text-zinc-700 hover:bg-zinc-50'],
     },
   },
@@ -25,9 +25,9 @@ export interface TButtonProps
   children: React.ReactNode
 }
 
-export function Button({children, variant, ...props}: TButtonProps) {
+export function Button({children, variant, className, ...props}: TButtonProps) {
   return (
-    <button className={button({variant})} {...props}>
+    <button className={button({variant, className})} {...props}>
       {children}
     </button>
   )

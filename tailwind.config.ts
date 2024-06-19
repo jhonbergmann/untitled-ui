@@ -15,20 +15,28 @@ const config: Config = {
         violet: {
           25: '#fcfaff',
         },
+        error: {
+          25: '#FFFBFA',
+          50: '#FEF3F2',
+          100: '#FEE4E2',
+          200: '#FECDCA',
+          300: '#FDA29B',
+          400: '#F97066',
+          500: '#F04438',
+          600: '#D92D20',
+          700: '#B42318',
+          800: '#912018',
+          900: '#7A271A',
+        },
       },
       keyframes: {
         slideDownAndFade: {
           from: {opacity: '0', transform: 'translateY(-2px)'},
           to: {opacity: '1', transform: 'translateY(0)'},
         },
-        //  slideUpAndFade: {
-        //  from: {opacity: '1'},
-        //  to: {opacity: '0'},
-        //  },
       },
       animation: {
         slideDownAndFade: 'slideDownAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-        // slideUpAndFade: 'slideUpAndFade 1s linear',
       },
     },
   },
