@@ -3129,7 +3129,7 @@ synckit@^0.8.6:
     "@pkgr/core" "^0.1.0"
     tslib "^2.6.2"
 
-tailwind-merge@^2.2.0:
+tailwind-merge@^2.2.0, tailwind-merge@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-2.3.0.tgz#27d2134fd00a1f77eca22bcaafdd67055917d286"
   integrity sha512-vkYrLpIP+lgR0tQCG6AP7zZXCTLc1Lnv/CCRT3BqJ9CZ3ui2++GPaGb1x/ILsINIMSYqqvrpqjUFsMNLlW99EA==
