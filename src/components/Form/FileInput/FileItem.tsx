@@ -1,6 +1,7 @@
 import {tv, VariantProps} from 'tailwind-variants'
 import {CheckCircle2, Trash2, UploadCloud} from 'lucide-react'
 
+import {Conditional} from '@/components/Basics/Conditional'
 import {Button} from '@/components/Button'
 import {formatBytes} from '@/utils'
 
@@ -50,24 +51,23 @@ export function FileItem({state, name, size}: TFileItemProps) {
       <div className={icon()}>
         <UploadCloud className="h-4 w-4" />
       </div>
-      {state === 'error' ? (
+      <Conditional render={state === 'error'}>
         <div className="flex flex-1 flex-col items-start gap-1">
           <div className="flex flex-col">
-            <span className="text-error-700 dark:text-error-400 text-sm font-medium">
+            <span className="text-sm font-medium text-error-700 dark:text-error-400">
               Upload failed, please try again.
             </span>
-            <span className="text-error-600 dark:text-error-500 text-sm">
+            <span className="text-sm text-error-600 dark:text-error-500">
               {name}
             </span>
           </div>
           <button
-            className="hover:text-error-900 text-error-700 dark:text-error-400 dark:hover:text-error-300 text-sm font-semibold"
+            className="text-sm font-semibold text-error-700 hover:text-error-900 dark:text-error-400 dark:hover:text-error-300"
             type="button"
           >
             Try again
           </button>
         </div>
-      ) : (
         <div className="flex flex-1 flex-col items-start gap-1">
           <div className="flex flex-col">
             <span className="text-sm font-medium text-zinc-700 dark:text-zinc-100">
@@ -79,26 +79,34 @@ export function FileItem({state, name, size}: TFileItemProps) {
           </div>
           <div className="flex w-full items-center gap-3">
             <div className="h-2 flex-1 rounded-full bg-zinc-100 dark:bg-zinc-600">
-              <div
-                className="h-2 rounded-full bg-violet-600 dark:bg-violet-400"
-                style={{width: state === 'completed' ? '100%' : '80%'}}
-              />
+              <Conditional render={state === 'completed'}>
+                <div
+                  className="h-2 rounded-full bg-violet-600 dark:bg-violet-400"
+                  style={{width: '100%'}}
+                />
+                <div
+                  className="h-2 rounded-full bg-violet-600 dark:bg-violet-400"
+                  style={{width: '80%'}}
+                />
+              </Conditional>
             </div>
             <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
-              {state === 'completed' ? '100%' : '80%'}
+              <Conditional render={state === 'completed'}>
+                <span>100%</span>
+                <span>80%</span>
+              </Conditional>
             </span>
           </div>
         </div>
-      )}
-      {state === 'completed' ? (
+      </Conditional>
+      <Conditional render={state === 'completed'}>
         <Button type="button" variant="ghost">
           <CheckCircle2 className="h-5 w-5 fill-violet-600 text-white" />
         </Button>
-      ) : (
         <Button type="button" variant="ghost" className={deleteButton()}>
           <Trash2 className="h-5 w-5" />
         </Button>
-      )}
+      </Conditional>
     </div>
   )
 }
