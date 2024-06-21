@@ -1,10 +1,7 @@
 'use client'
 
-import {ComponentProps} from 'react'
-
-import {useFileInput} from './Root'
-
-interface TControlProps extends ComponentProps<'input'> {}
+import {useFileInput} from '@/components/Form/FileInput/Root'
+import {TControlProps} from '@/components/Basics/Input/data'
 
 export function Control({multiple = false, ...props}: TControlProps) {
   const {id, onFilesSelected} = useFileInput()

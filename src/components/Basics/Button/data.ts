@@ -1,7 +1,7 @@
 import {ComponentProps} from 'react'
 import {tv, VariantProps} from 'tailwind-variants'
 
-const button = tv({
+export const button = tv({
   base: [
     'rounded-lg px-4 py-2 text-sm font-semibold outline-none shadow-sm',
     'focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2',
@@ -29,12 +29,4 @@ export interface TButtonProps
   extends ComponentProps<'button'>,
     VariantProps<typeof button> {
   children: React.ReactNode
-}
-
-export function Button({children, variant, className, ...props}: TButtonProps) {
-  return (
-    <button className={button({variant, className})} {...props}>
-      {children}
-    </button>
-  )
 }

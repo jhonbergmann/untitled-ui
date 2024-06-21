@@ -2,11 +2,7 @@
 
 import {ComponentProps, createContext, useContext, useId, useState} from 'react'
 
-type TFileInputContext = {
-  id: string
-  files: File[]
-  onFilesSelected: (files: File[], multiple: boolean) => void
-}
+import {TFileInputContext} from '@/components/Form/FileInput/data'
 
 const FileInputContext = createContext({} as TFileInputContext)
 

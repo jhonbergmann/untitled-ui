@@ -1,13 +1,14 @@
-import {ComponentProps} from 'react'
 import {twMerge} from 'tailwind-merge'
 
-interface TPrefixProps extends ComponentProps<'div'> {}
+import {
+  TPrefixProps,
+  TControlProps,
+  TRootProps,
+} from '@/components/Basics/Input/data'
 
 export function Prefix(props: TPrefixProps) {
   return <div {...props} />
 }
-
-interface TControlProps extends ComponentProps<'input'> {}
 
 export function Control(props: TControlProps) {
   return (
@@ -20,8 +21,6 @@ export function Control(props: TControlProps) {
     />
   )
 }
-
-interface TRootProps extends ComponentProps<'div'> {}
 
 export function Root(props: TRootProps) {
   return (
