@@ -40,4 +40,4 @@
 
 ## 📝 License
 
-[MIT © Jhonatan Bergmann](https://github.com/)
+[MIT © Jhonatan Bergmann](https://github.com/jhonbergmann/untitled-ui/blob/main/LICENSE)
