@@ -5,7 +5,6 @@
 <p align="center">
   <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/jhonbergmann/untitled-ui" />
   <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/jhonbergmann/untitled-ui" />
-  <img alt="Github License" src="https://img.shields.io/github/license/jhonbergmann/untitled-ui" />
 </p>
 
 <p align="center">creative interface :)</p>
