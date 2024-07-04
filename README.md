@@ -41,7 +41,7 @@ To install and run the project locally, follow these steps:
 ## ⚙️ Usage
 
 1. Start the development server: `yarn dev`
-1. Now access the following url in your browser `http://localhost:3000`
+1. Now access the following url in your browser: `http://localhost:3000`
 
 ## 📝 License
 
