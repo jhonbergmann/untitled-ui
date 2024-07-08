@@ -16,7 +16,7 @@
 </p>
 
 ## 🔺 Demo
-### [Live Demo, click here](https://untitled-ui-flax.vercel.app/)
+### [Live Demo, click here](https://untitled-ui-jhonatan-bergmann.vercel.app/)
 
 ## 📦 Tech Stack
 
